@@ -5,7 +5,7 @@
         The Num class has a toString method that returns the value of the Num 		as a string
         The Num class has an equals method that compares the value of two Nums to see if they are equal.
 */
-public class Num {
+public class Num implements Comparable{
     private int value;
 
     public Num(){
@@ -32,4 +32,8 @@ public class Num {
         return this.value == otherNum.value;
     }
 
+    public int compareTo(Object other){
+        Num otherNum = (Num) other;
+        return this.getValue() - otherNum.getValue();
+    }
 }
